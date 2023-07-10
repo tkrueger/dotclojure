@@ -31,9 +31,9 @@
  ;;     :classpath-overrides - map of lib to path that overrides the result of resolving deps
 
  :aliases {:user/nrepl {:extra-deps {nrepl/nrepl {:mvn/version "1.1.0-alpha1"}
-                                     cider/cider-nrepl {:mvn/version "0.30.0"}
-                                     refactor-nrepl/refactor-nrepl {:mvn/version "3.6.0"}
-                                     mx.cider/enrich-classpath {:mvn/version "1.9.0"}}
+                                     cider/cider-nrepl {:mvn/version "0.32.0-alpha1"}
+                                     refactor-nrepl/refactor-nrepl {:mvn/version "3.7.1"}
+                                     mx.cider/enrich-classpath {:mvn/version "1.11.2"}}
                         :main-opts ["-m" "nrepl.cmdline" "--interactive" "--color"
                                     "--middleware" "[refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware]"]}
 
@@ -41,18 +41,18 @@
            ;; Run with "clj -Mreveal:ci-dev", then connect to repl.
            ;; To start from emacs using cider, do C-u,C-c,M-j and use -Mreveal:ci-dev as first Argo.
            ;; See https://vlaaad.github.io/reveal for details.
-           :user/reveal {:extra-deps {vlaaad/reveal {:mvn/version "1.3.277"}
+           :user/reveal {:extra-deps {vlaaad/reveal {:mvn/version "1.3.280"}
                                       nrepl/nrepl {:mvn/version "1.1.0-alpha1"}
-                                      cider/cider-nrepl {:mvn/version "0.30.0"}
-                                      refactor-nrepl/refactor-nrepl {:mvn/version "3.6.0"}
-                                      mx.cider/enrich-classpath {:mvn/version "1.9.0"}}
+                                      cider/cider-nrepl {:mvn/version "0.32.0-alpha1"}
+                                      refactor-nrepl/refactor-nrepl {:mvn/version "3.7.1"}
+                                      mx.cider/enrich-classpath {:mvn/version "1.11.2"}}
                          :main-opts ["-m" "nrepl.cmdline"
                                      "--interactive" "--color"
                                      "--middleware" "[vlaaad.reveal.nrepl/middleware,cider.nrepl/cider-middleware, refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware]"
                                      "-e" "(require,'dev)"]
                          ;; optional​ preferences
                          :jvm-opts ["-Dvlaaad.reveal.prefs={:theme,:light}"]}
-           :user/debugger {:extra-deps {com.github.jpmonettas/flow-storm-dbg {:mvn/version "3.3.309"}}}}
+           :user/debugger {:extra-deps {com.github.jpmonettas/flow-storm-dbg {:mvn/version "3.6.9"}}}}
 
  ;; Provider attributes
 
