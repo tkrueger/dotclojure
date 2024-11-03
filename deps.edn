@@ -50,7 +50,11 @@
             :extra-deps {lambdaisland/kaocha {:mvn/version "1.91.1392"}}}
 
            :user/flow-storm
-           {:extra-deps {com.github.jpmonettas/flow-storm-dbg {:mvn/version "3.7.5"}}}
+           {:classpath-overrides {org.clojure/clojure nil}
+            :extra-deps {com.github.flow-storm/clojure {:mvn/version "1.12.0-1"}
+                         com.github.flow-storm/flow-storm-dbg {:mvn/version "3.17.4"}}
+            :jvm-opts ["-Dclojure.storm.instrumentEnable=true"
+                       #_"-Dclojure.storm.instrumentOnlyPrefixes=YOUR_INSTRUMENTATION_STRING"]}
 
            ;; run neil deps upgrade --alias :user/nrepl to upgrade deps
            :user/nrepl
