@@ -72,7 +72,10 @@
                          nrepl/nrepl {:mvn/version "1.3.1"}}
             :middleware [vlaaad.reveal.nrepl/middleware]
             :main-opts ["-m" "nrepl.cmdline"
-                        "--middleware" "[vlaaad.reveal.nrepl/middleware]"]}}
+                        "--middleware" "[vlaaad.reveal.nrepl/middleware]"]}
+           :neil {:deps {io.github.babashka/neil {:git/tag "v0.3.68"
+                                                  :git/sha "78ffab1"}}
+                  :main-opts ["-m" "babashka.neil"]}}
 
  ;; Provider attributes
 
