@@ -62,8 +62,8 @@
 
            :user/flow-storm
            {:classpath-overrides {org.clojure/clojure nil}
-            :extra-deps {com.github.flow-storm/clojure {:mvn/version "1.12.0-1"}
-                         com.github.flow-storm/flow-storm-dbg {:mvn/version "4.2.2"}}
+            :extra-deps {com.github.flow-storm/clojure {:mvn/version "1.12.1"}
+                         com.github.flow-storm/flow-storm-dbg {:mvn/version "4.4.5"}}
             :jvm-opts ["-Dclojure.storm.instrumentEnable=true"
                        #_"-Dclojure.storm.instrumentOnlyPrefixes=YOUR_INSTRUMENTATION_STRING"]}
 
