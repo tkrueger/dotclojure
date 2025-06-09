@@ -75,7 +75,11 @@
                         "--middleware" "[vlaaad.reveal.nrepl/middleware]"]}
            :neil {:deps {io.github.babashka/neil {:git/tag "v0.3.68"
                                                   :git/sha "78ffab1"}}
-                  :main-opts ["-m" "babashka.neil"]}}
+                  :main-opts ["-m" "babashka.neil"]}
+
+          :user/morse
+           {:extra-deps {io.github.nubank/morse {:git/tag "v2023.04.30.01" :git/sha "d99b09c"}}}
+}
 
  ;; Provider attributes
 
