@@ -10,11 +10,7 @@
 ;; Only the last :paths is kept and others are dropped.
 
 {
- ;; Paths
- ;;   Directories in the current project to include in the classpath
-
- :paths ["~/.clojure/dev-src"]
-
+ 
  ;; External dependencies
 
  ;; :deps {
@@ -30,7 +26,10 @@
  ;;     :extra-paths - vector of additional paths to add to the classpath
  ;;     :classpath-overrides - map of lib to path that overrides the result of resolving deps
 
- :aliases {:user/neil
+ :aliases {:user/dev-mac  {:extra-paths ["/Users/thorsten/src-dev"]}
+           :user/dev-linux {:extra-paths ["/home/thorsten/src-dev"]}
+
+           :user/neil
            {:deps {io.github.babashka/neil {:git/tag "v0.2.63"
                                             :git/sha "076fb83"}}
             :main-opts ["-m" "babashka.neil"]}
